@@ -3,8 +3,8 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
-  margin: 0.5rem 0;
-  padding: 0.5rem 0.7rem;
+  /* margin: 0.5rem 0;
+  padding: 0.5rem 0.7rem; */
   font-weight: bold;
   text-transform: capitalize;
 }
@@ -22,7 +22,8 @@
   position: absolute;
   width: 100%;
   border: 1px rgb(246, 235, 235) solid;
-  top: 45px;
+  /* top: 45px; */
+  top: 37px;
   left: 0;
 }
 .projectItemSettings {
@@ -31,6 +32,9 @@
 }
 a {
   color: black;
+  width: 100%;
+  line-height: 2.02;
+  padding: 0 0.7rem;
 }
 .darkMode:hover {
   background-color: #262525;

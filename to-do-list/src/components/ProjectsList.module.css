@@ -5,6 +5,7 @@
   overflow-x: hidden;
   max-height: 20rem;
   padding: 0.5rem;
+  row-gap: 0.7rem;
 }
 .darkMode {
   background-color: #1b1b1b;
