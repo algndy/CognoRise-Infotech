@@ -1,0 +1,14 @@
+.app {
+  display: flex;
+  height: 100dvh;
+}
+.app main {
+  display: flex;
+  overflow: hidden;
+  width: -webkit-fill-available;
+  transition: all 300ms;
+}
+.app .darkMode {
+  background-color: black;
+  color: white;
+}

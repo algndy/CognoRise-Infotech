@@ -1,0 +1,17 @@
+.addButton {
+  background-image: url(/purble-add.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 1.2rem;
+  aspect-ratio: 1;
+  transition: all 600ms;
+  cursor: pointer;
+}
+.addButton:hover {
+  background-image: url(/add.png);
+  transition: all 300ms;
+}
+.darkMode {
+  background-image: url(/blue-add.png);
+}

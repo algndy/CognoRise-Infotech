@@ -1,0 +1,23 @@
+.darkModeButton {
+  background-image: url(/dark-mode.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 1.2rem;
+  aspect-ratio: 1;
+  cursor: pointer;
+  transition: all 300ms;
+}
+/* .darkModeButton:hover {
+  background-image: url(/light-mode.png);
+  transition: all 300ms;
+} */
+.darkMode {
+  background-image: url(/light-mode.png);
+  transform: scale(1.4);
+  transition: all 300ms;
+}
+/* .darkMode.darkModeButton:hover {
+  background-image: url(/dark-mode.png);
+  transition: all 300ms;
+} */

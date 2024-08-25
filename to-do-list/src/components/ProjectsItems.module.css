@@ -1,0 +1,43 @@
+.projectItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0.7rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.projectItem:hover {
+  background-color: rgb(244, 247, 253);
+  border-radius: 5px;
+}
+.active {
+  background-color: rgb(244, 247, 253);
+  border-radius: 5px;
+}
+
+.projectItem::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border: 1px rgb(246, 235, 235) solid;
+  top: 45px;
+  left: 0;
+}
+.projectItemSettings {
+  display: flex;
+  gap: 0.5rem;
+}
+a {
+  color: black;
+}
+.darkMode:hover {
+  background-color: #262525;
+}
+.darkMode a {
+  color: white;
+}
+.darkMode.active {
+  background-color: #262525;
+}

@@ -1,0 +1,23 @@
+.closeButton {
+  background-image: url(/lightpurple-close.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 1.2rem;
+  aspect-ratio: 1;
+  transition: all 600ms;
+  cursor: pointer;
+}
+.closeButton:hover {
+  background-image: url(/lightpurple-close-without-square.png);
+  transform: rotate(90deg) scale(1.5);
+  transition: all 300ms;
+}
+.darkMode {
+  background-image: url(/lightblue-close.png);
+}
+
+.darkMode.closeButton:hover {
+  background-image: url(/lightblue-close-without-square.png);
+  transform: rotate(90deg) scale(1);
+}

@@ -1,0 +1,33 @@
+.sidebar {
+  width: 18rem;
+  position: relative;
+  transition: all 300ms;
+}
+.sidebar .sideButton {
+  position: absolute;
+  top: 10rem;
+  left: 100%;
+  width: 1rem;
+  height: 10.05rem;
+  text-align: center;
+  align-content: center;
+  border-top-right-radius: 500px;
+  border-bottom-right-radius: 500px;
+  color: white;
+  background-color: blueviolet;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hideSidebar {
+  width: 0;
+  transition: all 300ms;
+}
+.darkMode {
+  background-color: black;
+  color: white;
+}
+.darkMode .sideButton {
+  background-color: #3277e3;
+}

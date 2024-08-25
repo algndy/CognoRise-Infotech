@@ -1,0 +1,17 @@
+.deleteButton {
+  background-image: url(/lightpurple-closed-bin.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 1.2rem;
+  aspect-ratio: 1;
+  cursor: pointer;
+  transition: all 600ms;
+}
+.deleteButton:hover {
+  background-image: url(/opend-bin.png);
+  transition: all 300ms;
+}
+.darkMode {
+  background-image: url(/lightblue-closed-bin.png);
+}

@@ -1,0 +1,144 @@
+.taskEditForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.232);
+  z-index: 10;
+  backdrop-filter: blur(3px);
+}
+.taskEditFormSmall {
+  position: relative;
+  align-content: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 3px 5px 0px gradient();
+  /* max-width: 40rem; */
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 2rem 2rem;
+}
+.taskEditFormSmall:before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  transform: translate(0px, 8px);
+  z-index: -1;
+  background: conic-gradient(from 90deg at 0% 90%, #814ff6, white);
+  filter: blur(15px);
+}
+
+.controledElements {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+.controledElements div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 100%;
+}
+
+.taskEditFormSmall .controledElements div label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.taskEditFormSmall .controledElements div input,
+.taskEditFormSmall .controledElements div select {
+  /* width: 25rem; */
+
+  border: 1px #e3deee solid;
+  border-radius: 6px;
+  padding: 0.8rem 0.8rem;
+  font-size: 1rem;
+  outline: none;
+  text-transform: capitalize;
+}
+
+.taskEditFormSmall .controledElements div input:focus,
+.taskEditFormSmall .controledElements div select:focus {
+  border: 2px #7c4ded solid;
+  border-radius: 6px;
+}
+
+.taskEditFormSmall .controledElements button {
+  padding: 1.2rem 2rem;
+  background-color: #7c4ded;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 5rem;
+}
+.taskEditFormSmall .controledElements button:hover,
+.taskEditFormSmall .controledElements button:focus {
+  background-color: #6b32ef;
+  border: none;
+  box-shadow: 0px 0px 0px 2px rgb(25, 5, 247);
+  border: 2px white solid;
+}
+
+.taskEditFormSmall .closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.darkMode {
+  background-color: rgba(255, 255, 255, 0.13);
+}
+.darkMode .taskEditFormSmall {
+  background-color: black;
+}
+.darkMode .taskEditFormSmall:before {
+  background: none;
+  box-shadow: 0px 8px 2px 0px rgb(125, 125, 235);
+}
+
+.darkMode input,
+.darkMode select,
+.darkMode .options {
+  background-color: black;
+  color: white;
+}
+
+.darkMode .taskEditFormSmall .controledElements div input:focus,
+.darkMode .taskEditFormSmall .controledElements div select:focus {
+  border: 2px #3277e3 solid;
+  border-radius: 6px;
+}
+
+.darkMode .taskEditFormSmall .controledElements button {
+  background-color: #3277e3;
+}
+
+.darkMode .taskEditFormSmall .controledElements button:hover,
+.darkMode .taskEditFormSmall .controledElements button:focus {
+  background-color: #3277e3;
+  box-shadow: 0px 0px 0px 2px #3277e3;
+  border: 2px black solid;
+}
+
+@media screen and (max-width: 770px) {
+  .taskEditFormSmall {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .taskEditFormSmall {
+    width: 90%;
+  }
+}

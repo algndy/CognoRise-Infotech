@@ -1,0 +1,36 @@
+.projectLayout {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: -webkit-fill-available;
+  margin-left: 2rem;
+}
+.projectHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+.projectHeader h1 {
+  text-transform: capitalize;
+  font-size: 2.38rem;
+}
+.projectLayout .toDoLists {
+  display: flex;
+  gap: 1.4rem;
+  overflow: auto;
+  height: 92.6dvh;
+}
+.addNewListButton {
+  background-color: rgb(231 237 247);
+  color: rgb(70, 83, 119);
+  padding: 0.5rem 0.7rem;
+  border: none;
+  border-radius: 15px;
+  font-size: 1rem;
+  margin-right: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}

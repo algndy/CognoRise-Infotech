@@ -1,0 +1,11 @@
+.projectsList {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 20rem;
+  padding: 0.5rem;
+}
+.darkMode {
+  background-color: #1b1b1b;
+}

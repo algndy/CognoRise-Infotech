@@ -1,0 +1,66 @@
+.projectNav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-items: center;
+  padding: 1rem;
+  width: 18rem;
+  transition: all 300ms;
+  padding-right: 1rem;
+}
+.logo {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 1.5rem;
+}
+.logo img {
+  width: 70%;
+}
+
+.addProject {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.projectNavSettings {
+  display: flex;
+  gap: 0.5rem;
+}
+.clearButton {
+  width: 100%;
+  margin-top: 20px;
+  padding: 0.6rem 0;
+  background-color: #7c4ded;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  outline: none;
+}
+.clearButton:hover,
+.clearButton:focus {
+  background-color: #6b32ef;
+  border: none;
+  box-shadow: 0px 0px 0px 2px rgb(25, 5, 247);
+  border: 2px white solid;
+  cursor: pointer;
+}
+.hideNavBar {
+  transform: translateX(-100%);
+  transition: all 300ms;
+}
+
+.darkMode.clearButton {
+  background-color: #3277e3;
+}
+
+.darkMode.clearButton:hover,
+.darkMode.clearButton:focus {
+  background-color: #3277e3;
+  box-shadow: 0px 0px 0px 2px #3277e3;
+  border: 2px black solid;
+}

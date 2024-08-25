@@ -1,0 +1,64 @@
+.task {
+  border: 2px rgb(225, 227, 232) solid;
+  border-radius: 15px;
+  padding: 0.8rem;
+  background-color: white;
+  animation: slideUp 1s ease-out backwards;
+}
+.taskHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.task h4 {
+  margin: 0.8rem 0;
+  width: 17rem;
+  text-transform: capitalize;
+}
+.task .taskDescription {
+  color: rgb(160, 165, 176);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.task .taskHeader .taskPiriority {
+  color: white;
+  background-color: blue;
+  font-weight: 500;
+  padding: 0.2rem 0.8rem;
+  border-radius: 20px;
+  text-align: center;
+  align-content: center;
+  text-transform: capitalize;
+}
+.task .taskHeader .taskSettings {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.task .taskHeader .taskPiriority.highPriority {
+  background-color: rgb(252, 227, 222);
+  color: rgb(239, 135, 111);
+}
+.task .taskHeader .taskPiriority.mediumPriority {
+  background-color: rgb(229, 243, 205);
+  color: rgb(126, 188, 56);
+}
+.task .taskHeader .taskPiriority.lowPriority {
+  background-color: rgb(236, 239, 245);
+  color: rgb(171, 180, 199);
+}
+.darkMode {
+  background-color: black;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50%); /* Start off-screen (bottom) */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at the original position */
+  }
+}
