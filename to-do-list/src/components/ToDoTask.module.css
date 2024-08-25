@@ -3,6 +3,7 @@
   border-radius: 15px;
   padding: 0.8rem;
   background-color: white;
+  overflow: hidden;
   animation: slideUp 1s ease-out backwards;
 }
 .taskHeader {
