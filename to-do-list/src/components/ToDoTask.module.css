@@ -11,13 +11,14 @@
   align-items: center;
 }
 .task h4 {
+  font-size: 1.3rem;
   margin: 0.8rem 0;
   width: 17rem;
   text-transform: capitalize;
 }
 .task .taskDescription {
   color: rgb(160, 165, 176);
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 
