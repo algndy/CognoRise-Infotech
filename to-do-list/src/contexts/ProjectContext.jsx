@@ -79,24 +79,44 @@ function ProjectContext({ children }) {
   function handleAddNewList(projectId) {
     const newProjects = projects.map((project) =>
       projectId === project.id
-        ? {
-            ...project,
-            lists: [
-              ...project.lists,
-              {
-                id: project.lists[project.lists.length - 1].id + 1,
-                name: `to do ${project.lists[project.lists.length - 1].id + 1}`,
-                tasks: [
-                  {
-                    id: 1,
-                    name: "task 1",
-                    description: "this is task 1",
-                    piriority: "low",
-                  },
-                ],
-              },
-            ],
-          }
+        ? project.lists.length !== 0
+          ? {
+              ...project,
+              lists: [
+                ...project.lists,
+                {
+                  id: project.lists[project.lists.length - 1].id + 1,
+                  name: `to do ${
+                    project.lists[project.lists.length - 1].id + 1
+                  }`,
+                  tasks: [
+                    {
+                      id: 1,
+                      name: "task 1",
+                      description: "this is task 1",
+                      piriority: "low",
+                    },
+                  ],
+                },
+              ],
+            }
+          : {
+              ...project,
+              lists: [
+                {
+                  id: 1,
+                  name: "to do 1",
+                  tasks: [
+                    {
+                      id: 1,
+                      name: "task 1",
+                      description: "this is task 1",
+                      piriority: "low",
+                    },
+                  ],
+                },
+              ],
+            }
         : project
     );
     setProjects(newProjects);
