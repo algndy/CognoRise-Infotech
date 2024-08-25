@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useProjectContext } from "../contexts/ProjectContext";
 import AddButton from "../ui/AddButton";
 import DarkModButton from "../ui/DarkModeButton";
@@ -8,6 +8,7 @@ import ProjectsList from "./ProjectsList";
 function ProjectNav({ showSidebar }) {
   const { setProjects, handelAddNewProject, darkMode, setDarkMode } =
     useProjectContext();
+  const navigate = useNavigate();
   return (
     <div
       className={`${styles.projectNav} ${
@@ -36,7 +37,10 @@ function ProjectNav({ showSidebar }) {
       <nav>
         <ProjectsList />
         <button
-          onClick={() => setProjects([])}
+          onClick={() => {
+            navigate("/");
+            setProjects([]);
+          }}
           className={`${styles.clearButton} ${darkMode ? styles.darkMode : ""}`}
         >
           clear all
