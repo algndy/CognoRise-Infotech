@@ -1,0 +1,73 @@
+.speedo {
+  width: 21rem;
+  aspect-ratio: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  /* background-color: rgba(39, 42, 44, 0.5); */
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.speedo .insiderText {
+  color: white;
+}
+.smallLines {
+  position: absolute;
+
+  width: 0.3rem;
+  height: 1.5rem;
+  background-color: black;
+  top: 2.5%;
+
+  left: 50%;
+  transform-origin: 50% 10rem;
+  transform: rotate(0deg);
+  color: white;
+  font-size: 0.5rem;
+  border-radius: 20px;
+  opacity: 0;
+  animation: showSlow 0.1s linear forwards;
+}
+
+@keyframes showSlow {
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1492px) {
+  .speedo {
+    width: 15rem;
+  }
+  .smallLines {
+    transform-origin: 50% 7.5rem;
+  }
+  .speedo .insiderText {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 1160px) {
+  .speedo {
+    width: 12rem;
+  }
+  .smallLines {
+    transform-origin: 50% 6rem;
+  }
+  .speedo .insiderText {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 960px) and (max-height: 850px) {
+  .speedo {
+    width: 9rem;
+  }
+  .smallLines {
+    transform-origin: 50% 4.5rem;
+    height: 1rem;
+  }
+  .speedo .insiderText {
+    font-size: 1rem;
+  }
+}
