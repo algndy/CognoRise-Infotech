@@ -33,8 +33,9 @@ main {
   justify-content: center;
   align-items: center;
   width: 100%;
-
-  overflow-y: auto;
+  height: 100dvh;
+  overflow: auto;
+  scroll-behavior: smooth;
 }
 
 @media screen and (max-width: 1160px) {
@@ -45,7 +46,7 @@ main {
 @media screen and (max-width: 960px) {
   .speedosContainer {
     flex-wrap: wrap-reverse;
-    height: -webkit-fill-available;
+    /* height: -webkit-fill-available; */
     padding: 3rem;
   }
   .container {
@@ -64,5 +65,27 @@ main {
 
   .container img {
     width: 17rem;
+  }
+}
+@media screen and (max-height: 490px) {
+  .container img {
+    width: 14rem;
+  }
+}
+
+@media (min-width: 915px) {
+  .container img {
+    display: block; /* Ensure images are displayed on larger screens */
+  }
+}
+
+@media (orientation: landscape) and (max-width: 915px) {
+  .container img {
+    display: none;
+  }
+  .speedosContainer {
+    scroll-behavior: smooth;
+    overflow: auto;
+    height: 100dvh;
   }
 }

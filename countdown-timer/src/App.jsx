@@ -1,5 +1,5 @@
 import styles from "./App.module.css";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Speedometer from "./components/Speedometer";
 import { useEffect } from "react";
 import InputTime from "./components/InputTime";
@@ -14,28 +14,39 @@ function convertMilliseconds(ms) {
 }
 
 function App() {
-  // const [remainTime, setRemainTime] = useState(
-  //   new Date("08/30/2024 02:30:50").getTime() - new Date().getTime()
-  // );
+  const speedosContainerRef = useRef(null);
   const [remainTime, setRemainTime] = useState(0);
   const { days, hours, minutes, seconds } = convertMilliseconds(remainTime);
   useEffect(() => {
-    if (remainTime > 0) {
-      const intervalId = setInterval(() => {
-        setRemainTime((remainTime) => remainTime - 1000);
-        console.log(days, hours, minutes, seconds);
-      }, 1000);
+    const handleOrientationChange = () => {
+      if (speedosContainerRef.current) {
+        speedosContainerRef.current.scrollTo({
+          top: -100000000,
+          behavior: "smooth",
+        });
+      }
+    };
 
-      return () => clearInterval(intervalId);
-    } else setRemainTime("0");
-  }, [days, hours, minutes, remainTime, seconds]);
+    // Add event listeners
+    window.addEventListener("orientationchange", handleOrientationChange);
+    window.addEventListener("resize", handleOrientationChange); // Fallback
+
+    // Initial check
+    handleOrientationChange();
+
+    // Clean up event listeners on component unmount
+    return () => {
+      window.removeEventListener("orientationchange", handleOrientationChange);
+      window.removeEventListener("resize", handleOrientationChange); // Clean up
+    };
+  }, []);
 
   return (
     <main className={styles.main}>
       <div className={styles.container}>
         <img src="/logo.svg" alt="logo" />
         <InputTime setRemainTime={setRemainTime} />
-        <div className={styles.speedosContainer}>
+        <div className={styles.speedosContainer} ref={speedosContainerRef}>
           <Speedometer
             LineColor="#f0c311"
             lineWidth="0.005rem"

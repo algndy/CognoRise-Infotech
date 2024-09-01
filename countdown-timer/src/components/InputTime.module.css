@@ -74,3 +74,22 @@
     font-size: 1rem;
   }
 }
+@media screen and (max-height: 490px) {
+  .form {
+    gap: 1rem;
+  }
+  .form .inputContainer input {
+    width: 7.5rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin: 0.05rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .form .buttonContainer button {
+    border-radius: 30px;
+    padding: 0.6rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}

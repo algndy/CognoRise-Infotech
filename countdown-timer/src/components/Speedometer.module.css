@@ -71,3 +71,17 @@
     font-size: 1rem;
   }
 }
+
+@media (max-width: 830px) {
+  .speedo {
+    width: 7rem;
+  }
+  .smallLines {
+    transform-origin: 50% 3.5rem;
+    width: 0.1rem;
+    height: 0.8rem;
+  }
+  .speedo .insiderText {
+    font-size: 0.65rem;
+  }
+}
