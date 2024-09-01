@@ -18,6 +18,16 @@ function App() {
   const [remainTime, setRemainTime] = useState(0);
   const { days, hours, minutes, seconds } = convertMilliseconds(remainTime);
   useEffect(() => {
+    if (remainTime > 0) {
+      const intervalId = setInterval(() => {
+        setRemainTime((remainTime) => remainTime - 1000);
+        console.log(days, hours, minutes, seconds);
+      }, 1000);
+      return () => clearInterval(intervalId);
+    } else setRemainTime("0");
+  }, [days, hours, minutes, remainTime, seconds]);
+
+  useEffect(() => {
     const handleOrientationChange = () => {
       if (speedosContainerRef.current) {
         speedosContainerRef.current.scrollTo({
