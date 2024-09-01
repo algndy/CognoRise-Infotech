@@ -24,7 +24,7 @@
 }
 
 .form .inputContainer input::placeholder {
-  color: rgba(255, 255, 255, 0.801);
+  color: rgba(255, 255, 255, 0.567);
 }
 .form .inputContainer .daysInput {
   border-top-left-radius: 30px;
