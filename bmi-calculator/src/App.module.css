@@ -38,3 +38,17 @@
   color: red;
   font-weight: 600;
 }
+
+@media screen and (max-width: 630px) {
+  .app {
+    min-width: 100%;
+  }
+  .app main {
+    width: 90%;
+    overflow: hidden;
+  }
+  .slideButtonsContainer {
+    justify-content: center;
+    gap: 2rem;
+  }
+}
