@@ -42,6 +42,7 @@
 @media screen and (max-width: 630px) {
   .app {
     min-width: 100%;
+    padding: 1rem 0;
   }
   .app main {
     width: 90%;
