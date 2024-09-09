@@ -1,0 +1,40 @@
+.app {
+  display: flex;
+  height: 100dvh;
+  background-color: rgb(233, 241, 252);
+  min-width: fit-content;
+}
+.app main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  margin: auto;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 20px 15px rgb(228, 228, 229);
+}
+.slideButtonsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.calculateButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  position: relative;
+  bottom: -30px;
+  box-shadow: 0 0 20px 5px rgb(228, 228, 229);
+  padding: 1.3rem 1.5rem 1.5rem 1.5rem;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+.calculateButton span {
+  color: red;
+  font-weight: 600;
+}
