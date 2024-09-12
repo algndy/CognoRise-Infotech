@@ -1,22 +1,30 @@
 import styles from "./CircularProgressBar.module.css";
-function CircularProgressBar({ result }) {
-  const width = 300;
+function CircularProgressBar({ result, fontSize, range }) {
+  const width = 300 / 16;
   const strokeWidth = 6;
   const ration = 4;
-  const center = width / 2;
-  const radius = (width - width / ration) / 2;
-  const innerBoundary = (width - radius * 2) / 2;
+  const center = (width * 16) / 2;
+  const radius = (width * 16 - (width * 16) / ration) / 2;
+  const innerBoundary =
+    ((width * 16 - radius * 2) / 2) * ((width * 16 * 13) / 5000);
   const dashArray = 2 * Math.PI * radius;
-  const dashOffset = dashArray - (dashArray * result) / 100;
-  console.log(radius);
+  const dashOffset = dashArray - (dashArray * result) / range;
+  const innerResultWidth = (width * 8) / 15;
+  console.log(range);
 
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      style={{
+        width: `${width}rem`,
+        height: `${width}rem`,
+      }}
+    >
       <div
         className={styles.progressBars}
         style={{
-          width: `${width}px`,
-          height: `${width}px`,
+          width: `${width}rem`,
+          height: `${width}rem`,
           "--dashOffset": `${dashOffset}`,
           "--dashArray": `${dashArray}`,
           "--progress": `${result}`,
@@ -64,9 +72,20 @@ function CircularProgressBar({ result }) {
             // filter="url(#inset-shadow)"
           ></circle>
         </svg>
-        <div className={styles.tail}></div>
+        <div
+          className={styles.tail}
+          style={{ "--rotationDeg": `${(360 / range) * result}` }}
+        ></div>
       </div>
-      <div className={styles.result}>{result}</div>
+      <div
+        className={styles.result}
+        style={{
+          width: `${innerResultWidth}rem`,
+          fontSize: `${fontSize || "1rem"}`,
+        }}
+      >
+        {result}
+      </div>
     </div>
   );
 }

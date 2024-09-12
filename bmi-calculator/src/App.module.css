@@ -1,8 +1,10 @@
 .app {
+  position: relative;
   display: flex;
   height: 100dvh;
   background-color: rgb(233, 241, 252);
   min-width: fit-content;
+  overflow: hidden;
 }
 .app main {
   display: flex;
@@ -14,6 +16,8 @@
   background-color: white;
   border-radius: 20px;
   box-shadow: 0 0 20px 15px rgb(228, 228, 229);
+  max-height: -webkit-fill-available;
+  overflow: hidden auto;
 }
 .slideButtonsContainer {
   display: flex;
@@ -46,7 +50,7 @@
   }
   .app main {
     width: 90%;
-    overflow: hidden;
+    overflow: hidden auto;
   }
   .slideButtonsContainer {
     justify-content: center;

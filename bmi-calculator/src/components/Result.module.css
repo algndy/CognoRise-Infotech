@@ -1,0 +1,25 @@
+.overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 0;
+  /* bottom: 0; */
+  height: 100dvh;
+}
+.card {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  min-width: 30%;
+  border-radius: 20px;
+  padding: 2rem;
+  background-color: white;
+  overflow: auto;
+}

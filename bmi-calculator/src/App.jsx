@@ -5,12 +5,13 @@ import SlideRuler from "./components/SlideRuler";
 import ToggleSwitch from "./components/ToggleSwitch";
 import Button from "./ui/Button";
 import CircularProgressBar from "./components/CircularProgressBar";
+import Result from "./components/Result";
 function App() {
   //gender and age does not play a role in the BMI equation But it was added so that the application can be expanded to compute for other things.
   const [gender, setGender] = useState();
   const [height, setHeight] = useState();
   const [weight, setWeight] = useState();
-  const [result, setResult] = useState(60.35);
+  const [result, setResult] = useState();
   const [age, setAge] = useState();
 
   function CalculateResult() {
@@ -39,13 +40,15 @@ function App() {
             start={25}
           />
         </div>
-        {/* <CircularProgressBar result={result} /> */}
+
         <div className={styles.calculateButton}>
           <Button type="big" onClick={CalculateResult}>
             →
           </Button>
           <span>Calculate</span>
         </div>
+
+        {result && <Result result={result} />}
       </main>
     </div>
   );
