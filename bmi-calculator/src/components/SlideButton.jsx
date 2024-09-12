@@ -58,10 +58,10 @@ function SlideButton({ title, unit, setState, range, start }) {
         {arr}
       </div>
       <div className={styles.sliderButtons}>
-        <Button onClick={handleDecrease} type="small">
+        <Button onMouseDown={handleDecrease} type="small">
           -
         </Button>
-        <Button onClick={handleIncrease} type="small">
+        <Button onMouseDown={handleIncrease} type="small">
           +
         </Button>
       </div>

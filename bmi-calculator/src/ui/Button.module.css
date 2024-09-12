@@ -6,6 +6,7 @@
   text-align: center;
   align-content: center;
   font-family: "Times New Roman";
+  cursor: pointer;
 }
 
 .small {
@@ -20,4 +21,10 @@
   color: white;
   width: 3.5rem;
   font-size: 1.2rem;
+}
+.close {
+  position: absolute;
+  left: 92%;
+  top: 3%;
+  background-color: transparent;
 }

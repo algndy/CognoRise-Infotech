@@ -48,7 +48,7 @@ function App() {
           <span>Calculate</span>
         </div>
 
-        {result && <Result result={result} />}
+        {result && <Result result={result} setResult={setResult} />}
       </main>
     </div>
   );

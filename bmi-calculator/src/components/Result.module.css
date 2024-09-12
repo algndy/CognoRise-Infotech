@@ -12,6 +12,7 @@
   height: 100dvh;
 }
 .card {
+  position: relative;
   display: flex;
   gap: 2rem;
   flex-direction: column;

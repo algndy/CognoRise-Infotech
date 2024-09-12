@@ -1,3 +1,4 @@
+import Button from "../ui/Button";
 import CategoriesList from "./CategoriesList";
 import CategoryItem from "./CategoryItem";
 import CircularProgressBar from "./CircularProgressBar";
@@ -53,7 +54,7 @@ const bmiCategories = [
   },
 ];
 
-function Result({ result }) {
+function Result({ result, setResult }) {
   return (
     <div className={styles.overlay}>
       <div className={styles.card}>
@@ -64,10 +65,17 @@ function Result({ result }) {
             }).message
           }
         </h2>
-        <CircularProgressBar result={result} fontSize="3rem" range={40} />
+        <CircularProgressBar
+          result={result > 40 ? "> 40" : result}
+          fontSize="3rem"
+          range={40}
+        />
         <CategoriesList>
           <CategoryItem bmiCategories={bmiCategories} result={result} />
         </CategoriesList>
+        <Button type="close" onClick={() => setResult()}>
+          ❌
+        </Button>
       </div>
     </div>
   );
