@@ -56,6 +56,7 @@ This To-Do List app allows users to create multiple projects, lists within each 
 
 ## Technologies Used
 - **React.js**: Front-end framework for building user interfaces.
+- **React Router**: For handling dynamic routing and navigation across pages.
 - **Context API**: For global state management across the app.
 - **CSS Modules**: For scoped styling and responsive design.
 - **Vite**: Build tool for faster and leaner development.
