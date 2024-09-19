@@ -55,7 +55,7 @@ function App() {
     <main className={styles.main}>
       <div className={styles.container}>
         <img src="/logo.svg" alt="logo" />
-        <InputTime setRemainTime={setRemainTime} />
+        <InputTime remainTime={remainTime} setRemainTime={setRemainTime} />
         <div className={styles.speedosContainer} ref={speedosContainerRef}>
           <Speedometer
             LineColor="#f0c311"

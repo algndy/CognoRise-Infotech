@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./InputTime.module.css";
 
-function InputTime({ setRemainTime }) {
+function InputTime({ remainTime, setRemainTime }) {
   const [days, setDays] = useState("");
   const [hours, setHours] = useState("");
   const [minutes, setMinutes] = useState("");
@@ -67,7 +67,7 @@ function InputTime({ setRemainTime }) {
         />
       </div>
       <div className={styles.buttonContainer}>
-        <button type="submit">Start</button>
+        <button type="submit">{remainTime > 0 ? "Reset" : "Start"}</button>
       </div>
     </form>
   );
